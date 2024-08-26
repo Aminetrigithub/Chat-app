@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { apiClient } from "@/lib/api-client";
 import { SIGNUP_ROUTES } from "@/lib/contants";
+// import x from "../../../../server/model/UserModel";
+
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -35,7 +37,9 @@ const Auth = () => {
   const handleSignup = async () => {
     if (validateSignup()) {
       try {
-        const response = await apiClient.post(
+         
+        const response = {} 
+         await apiClient.post(
           SIGNUP_ROUTES,
           {
             email,
